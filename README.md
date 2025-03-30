@@ -124,7 +124,60 @@ New chart versions are automatically published when:
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! We appreciate your help in improving the NetBird Exporter. Please feel free to submit a Pull Request.
+
+Here's how you can contribute:
+
+### Setting Up Your Development Environment
+
+1. **Prerequisites:**
+    * [Go](https://golang.org/dl/) version 1.23 or later.
+    * [Git](https://git-scm.com/).
+    * (Optional) [Docker](https://www.docker.com/) if you plan to work with containerization.
+    * A running NetBird daemon for testing changes locally.
+
+2. **Clone the repository:**
+    ```bash
+    git clone https://github.com/gocloudio/netbird-exporter.git
+    cd netbird-exporter
+    ```
+
+3. **Build the exporter:**
+    ```bash
+    go build ./cmd/netbird-exporter
+    ```
+
+### Running Tests
+
+Ensure your changes pass the existing tests:
+
+```bash
+go test -v ./...
+```
+
+### Contribution Workflow
+
+1. **Fork the repository** on GitHub.
+2. **Clone your fork** locally (`git clone git@github.com:YOUR_USERNAME/netbird-exporter.git`).
+3. **Create a new branch** for your changes (`git checkout -b feat/my-new-feature` or `git checkout -b fix/issue-123`). Use a descriptive branch name.
+4. **Make your changes** and ensure code is formatted with `gofmt`.
+5. **Add tests** for new functionality or bug fixes.
+6. **Run tests** locally (`go test -v ./...`) to ensure everything passes.
+7. **Commit your changes** with a clear and concise commit message.
+8. **Push your branch** to your fork (`git push origin feat/my-new-feature`).
+9. **Open a Pull Request** from your fork's branch to the `main` branch of the `gocloudio/netbird-exporter` repository.
+10. **Describe your changes** clearly in the Pull Request description and link to any relevant issues.
+
+### Reporting Bugs and Suggesting Features
+
+Please use the [GitHub Issues](https://github.com/gocloudio/netbird-exporter/issues) tracker for reporting bugs or suggesting new features.
+
+* **Bug Reports:** Provide detailed steps to reproduce the bug, expected behavior, actual behavior, and your environment details (OS, NetBird version, Exporter version).
+* **Feature Requests:** Clearly describe the proposed feature, its use case, and potential benefits.
+
+### Code Style
+
+Please ensure your code is formatted using the standard Go tool `gofmt` before submitting a pull request. Most Go development environments can be configured to do this automatically.
 
 ## License
 
